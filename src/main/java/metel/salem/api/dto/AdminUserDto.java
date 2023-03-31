@@ -3,7 +3,7 @@ package metel.salem.api.dto;
 import lombok.Data;
 
 @Data
-public class AdminUser {
+public class AdminUserDto {
     private String email;
     private String password;
     private String phone;
