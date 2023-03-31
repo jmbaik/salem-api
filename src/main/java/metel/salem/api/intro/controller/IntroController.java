@@ -1,5 +1,6 @@
 package metel.salem.api.intro.controller;
 
+import lombok.RequiredArgsConstructor;
 import metel.salem.api.dto.AreaCodeDto;
 import metel.salem.api.dto.IntroDto;
 import metel.salem.api.intro.service.IntroService;
@@ -14,10 +15,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("intro")
+@RequiredArgsConstructor
 public class IntroController {
 
-    @Autowired
-    private IntroService service;
+    private final IntroService service;
 
     @ResponseBody
     @GetMapping("/{cCode}/{opt}")

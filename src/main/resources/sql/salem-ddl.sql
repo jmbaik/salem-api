@@ -84,3 +84,20 @@ CREATE TABLE `serving` (
   `updid` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`c_code`,`p_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- 추가
+-- salem.admin_user definition
+
+CREATE TABLE `admin_user` (
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `user_id` varchar(100) NOT NULL,
+  `regdate` datetime DEFAULT NULL,
+  `upddate` datetime DEFAULT NULL,
+  `c_code` varchar(5) NOT NULL,
+  `admin_level` varchar(100) NOT NULL DEFAULT 'admin',
+  PRIMARY KEY (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+

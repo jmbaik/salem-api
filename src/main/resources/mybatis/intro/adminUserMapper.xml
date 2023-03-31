@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="metel.salem.api.mapper.adminUserMapper">
+    <select id="selectAdminLoginInfo" resultType="metel.salem.api.dto.AdminUser" parameterType="hashmap">
+        SELECT a.email, a.password, a.phone, a.name, a.user_id, a.regdate as regDate, a.upddate as updDate
+            , a.c_code, a.admin_level, b.name as churchName
+        FROM salem.admin_user a LEFT JOIN ON salem.church_code b on a.c_code = b.c_code
+
+    </select>
+
+
+</mapper>
