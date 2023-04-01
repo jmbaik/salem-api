@@ -18,5 +18,7 @@ public class AdminUserDto {
 
     private String churchName;
 
+    private String pic;
+
     private String token;
 }

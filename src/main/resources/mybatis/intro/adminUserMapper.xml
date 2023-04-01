@@ -4,7 +4,7 @@
 
     <select id="selectAdminLoginInfo" resultType="metel.salem.api.dto.AdminUserDto" parameterType="metel.salem.api.dto.AdminUserDto">
         SELECT a.email, a.password, a.phone, a.name, a.user_id as userId, a.regdate as regDate, a.upddate as updDate
-            , a.c_code as cCode, a.admin_level as adminLevel, b.name as churchName
+            , a.c_code as cCode, a.admin_level as adminLevel, b.name as churchName, b.pic
         FROM salem.admin_user a LEFT JOIN salem.church_code b on a.c_code = b.c_code
         where 1=1
         <if test='email != null and email != ""'>
