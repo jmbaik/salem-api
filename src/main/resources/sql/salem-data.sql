@@ -28,3 +28,5 @@ INSERT INTO salem.area_code (code,name,alias_code) VALUES
 	 ('062','광주','N'),
 	 ('063','전북','O'),
 	 ('064','제주','P');
+
+-- https://t1.daumcdn.net/cfile/tistory/136DFD0A49B0BE47C4
